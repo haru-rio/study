@@ -1,17 +1,10 @@
 #include <stdio.h>
+#include "function1.h"
 
 int main(void)
 {
-    printf("HelloWorld\n");
-    int suuti;
-    printf("数値を入力して下さい: ");
-    scanf("%d", &suuti);
-    if (suuti == 10) printf("入力値は10です。\n");  //比較を行う演算子
-    if (suuti != 10) printf("入力値は10ではありません。\n");  //関係演算子
-    if (suuti < 10) printf("入力値は10より小さいです。\n");
-    if (suuti >= 10) printf("入力値は10以上です。\n");
-    if (suuti >= 8 && suuti <= 12) printf("8〜12の間です。\n"); //論理演算子
-    if (!(suuti >= 8 && suuti <= 12)) printf("8~12の間ではありません。\n"); //!をつけると判定結果を逆にする。　&&かつ  ||んまたは 　!否
+    input_check();
+    
     int score;
     printf("点数を入力して下さい:");
     scanf("%d", &score);
@@ -20,13 +13,7 @@ int main(void)
         score = 100;
     }
     printf("点数は %d 点です。\n", score);
-    {if (suuti == 10)
-    {
-        printf("入力値は10です。\n");
-    } else {
-        printf("入力値は10ではありません。\n");
-    }
-    }   //if~else文
+    
     int age;
     printf("年齢:");
     scanf("%d", &age);
